@@ -13,6 +13,7 @@ import {
 import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailIcon from "@mui/icons-material/Email";
 import moojee from "../assets/moojee.png";
+import { Link } from "react-scroll"; 
 
 function Intro() {
   const theme = useTheme();
@@ -69,6 +70,7 @@ function Intro() {
             }}>
               moojeefilm moojeefilm moojeefilm
             </Typography>
+            
 
             <Box sx={{ pt: 3 }}>
               <Stack 
@@ -76,6 +78,7 @@ function Intro() {
                 spacing={2} 
                 justifyContent={{ xs: 'center', md: 'flex-start' }}
               >
+                <Link to="contact" smooth={true} duration={1000} >
                 <Button
                   variant="contained"
                   sx={{ 
@@ -91,13 +94,18 @@ function Intro() {
                 >
                   Contact Me
                 </Button>
+                </Link>
+               
 
                 <Avatar sx={{ bgcolor: "#222831" }}>
                   <EmailIcon sx={{ color: "#EEEEEE" }} />
                 </Avatar>
+
+                <Link href="https://github.com/Moojee" target="_blank" rel="noopener noreferrer"> 
                 <Avatar sx={{ bgcolor: "#222831" }}>
                   <GitHubIcon sx={{ color: "#EEEEEE" }} />
                 </Avatar>
+                </Link>
               </Stack>
             </Box>
           </Grid>

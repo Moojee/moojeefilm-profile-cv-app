@@ -19,7 +19,8 @@ function Connect() {
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
-    <Box sx={{ backgroundColor: "#222831" }}>
+    <Box id="contact" 
+    sx={{ backgroundColor: "#222831" }}>
       <Grid
         container
         spacing={2}

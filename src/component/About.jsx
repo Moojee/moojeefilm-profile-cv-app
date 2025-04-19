@@ -17,7 +17,7 @@ function About() {
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
-    <Box
+    <Box id="about"
       sx={{
         backgroundColor: "#222831",
         py: { xs: 4, sm: 6, md: 6 },
