@@ -11,6 +11,7 @@ import {
 } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailIcon from "@mui/icons-material/Email";
+import ForumIcon from '@mui/icons-material/Forum';
 
 function About() {
   const theme = useTheme();
@@ -54,30 +55,29 @@ function About() {
             }}
           >
             <Typography
-              color="#393E46"
+              color="#EEEEEE"
               sx={{
-                fontSize: { xs: "16px", md: "20px" },
+                fontSize: { xs: "12px", md: "18px" },
                 lineHeight: 1.6,
                 textAlign: { xs: "center", md: "left" },
+                fontWeight: 300,
               }}
             >
-              Moojee Moojee Moojee Moojee Moojee Moojee Moojee Moojee Moojee
-              Moojee Moojee Moojee Moojee Moojee Moojee Moojee Moojee Moojee
-              Moojee Moojee Moojee Moojee Moojee Moojee Moojee Moojee Moojee
-              Moojee Moojee Moojee Moojee Moojee Moojee Moojee Moojee Moojee
+              Currently a 4th-year student at Southeast Asia University, 
+              majoring in Digital Technology and Innovation under the Faculty of Liberal Arts and Science.
             </Typography>
             <Box height={{ xs: "12px", md: "16px" }}></Box>
             <Typography
               color="#EEEEEE"
               sx={{
-                fontSize: { xs: "16px", md: "20px" },
+                fontSize: { xs: "12px", md: "18px" },
                 lineHeight: 1.6,
                 textAlign: { xs: "center", md: "left" },
+                fontWeight: 200,
               }}
             >
-              Moojee Moojee Moojee Moojee Moojee Moojee Moojee Moojee Moojee
-              Moojee Moojee Moojee Moojee Moojee Moojee Moojee Moojee Moojee
-              Moojee Moojee Moojee Moojee Moojee Moojee Moojee Moojee Moojee
+              I'm passionate about web design and development—whether it's UX/UI, or frontend work. 
+              Simply put, I enjoy and feel confident in creative design that lets me bring ideas to life.
             </Typography>
             <Box sx={{ pt: 3 }}>
               <Stack
@@ -102,12 +102,28 @@ function About() {
                   DONWLOAD RESUME
                 </Button>
 
+                <a
+                href="https://line.me/ti/p/KYx1zdM7BW"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: "none" }}
+                > 
                 <Avatar sx={{ bgcolor: "#222831" }}>
-                  <EmailIcon sx={{ color: "#EEEEEE" }} />
+                  <ForumIcon sx={{ color: "#EEEEEE" }} />
                 </Avatar>
-                <Avatar sx={{ bgcolor: "#222831" }}>
-                  <GitHubIcon sx={{ color: "#EEEEEE" }} />
-                </Avatar>
+                </a>
+                
+                <a
+                  href="https://github.com/Moojee"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ textDecoration: "none" }}
+                >
+                  <Avatar sx={{ bgcolor: "#222831", cursor: "pointer" }}>
+                    <GitHubIcon sx={{ color: "#EEEEEE" }} />
+                  </Avatar>
+                </a>
+
               </Stack>
             </Box>
           </Box>

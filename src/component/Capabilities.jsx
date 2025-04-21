@@ -58,10 +58,11 @@ function Capabilities() {
                   fontSize: { xs: "12px", md: "16px" },
                   lineHeight: 1.6,
                   textAlign: { xs: "center", md: "left" },
+                  fontWeight: 200,
                 }}
               >
-                Moojee Moojee Moojee Moojee Moojee Moojee Moojee Moojee Moojee
-                Moojee Moojee Moojee Moojee Moojee Moojee Moojee Moojee Moojee
+                I'm always looking for opportunities to grow and improve my skills, 
+                especially in areas like UX, UI, and frontend development."
               </Typography>
               <Box height={{ xs: "12px", md: "16px" }}></Box>
 
@@ -73,19 +74,19 @@ function Capabilities() {
                 >
                   <Button variant="outlined" size="medium" 
                   sx={{ borderRadius: 10, borderColor: "#00ADB5",  color: "#EEEEEE", }}>
-                  test
+                  JAVA
                   </Button>
                   <Button variant="outlined" size="medium" 
                   sx={{ borderRadius: 10, borderColor: "#00ADB5",  color: "#EEEEEE", }}>
-                  test test
+                  JAVA SCRIPT
                   </Button>
                   <Button variant="outlined" size="medium"
                   sx={{ borderRadius: 10, borderColor: "#00ADB5",  color: "#EEEEEE", }}>
-                  test test test
+                  REACT
                   </Button>
                   <Button variant="outlined" size="medium"
                   sx={{ borderRadius: 10, borderColor: "#00ADB5",  color: "#EEEEEE", }}>
-                  test test test test
+                  HTML
                   </Button>
                 </Stack>
 
@@ -98,19 +99,19 @@ function Capabilities() {
                 >
                   <Button variant="outlined" size="medium" 
                    sx={{ borderRadius: 10, borderColor: "#00ADB5",  color: "#EEEEEE", }}>
-                    test test test 
+                    CSS
                   </Button>
                   <Button variant="outlined" size="medium"
                   sx={{ borderRadius: 10, borderColor: "#00ADB5",  color: "#EEEEEE", }}>
-                  test test
+                  Tailwind CSS
                   </Button>
                   <Button variant="outlined" size="medium"
                   sx={{ borderRadius: 10, borderColor: "#00ADB5",  color: "#EEEEEE", }}>
-                  test test test
+                  DATABAS
                   </Button>
                   <Button variant="outlined" size="medium"
                   sx={{ borderRadius: 10, borderColor: "#00ADB5",  color: "#EEEEEE", }}>
-                  test
+                  FIGMA
                   </Button>
                 </Stack>
               </Box>

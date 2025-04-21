@@ -55,17 +55,16 @@ function Experience() {
             }}
           >
             <Typography
-              color="#393E46"
+              color="#EEEEEE"
               sx={{
                 fontSize: { xs: "16px", md: "20px" },
                 lineHeight: 1.6,
                 textAlign: { xs: "center", md: "left" },
               }}
             >
-              Moojee Moojee Moojee Moojee Moojee Moojee Moojee Moojee Moojee
-              Moojee Moojee Moojee Moojee Moojee Moojee Moojee Moojee Moojee
-              Moojee Moojee Moojee Moojee Moojee Moojee Moojee Moojee Moojee
-              Moojee Moojee Moojee Moojee Moojee Moojee Moojee Moojee Moojee
+              Project Experience
+              
+
             </Typography>
             <Box height={{ xs: "12px", md: "16px" }}></Box>
             <Typography
@@ -74,11 +73,13 @@ function Experience() {
                 fontSize: { xs: "16px", md: "20px" },
                 lineHeight: 1.6,
                 textAlign: { xs: "center", md: "left" },
+                fontWeight: 200, 
               }}
             >
-              Moojee Moojee Moojee Moojee Moojee Moojee Moojee Moojee Moojee
-              Moojee Moojee Moojee Moojee Moojee Moojee Moojee Moojee Moojee
-              Moojee Moojee Moojee Moojee Moojee Moojee Moojee Moojee Moojee
+              My team developed an AI-based travel planning assistant. 
+              I was fully responsible for the frontend—from UX/UI design to building the web interface using JavaScript, 
+              with React and Tailwind CSS as the main tools.
+              
             </Typography>
             
           </Box>
