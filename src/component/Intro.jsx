@@ -12,7 +12,6 @@ import {
 import GitHubIcon from "@mui/icons-material/GitHub";
 import ForumIcon from "@mui/icons-material/Forum";
 import moojee from "../assets/moojee.png";
-import moojeefilm from "../assets/moojeefilm.png";
 import { Link } from "react-scroll";
 
 function Intro() {
