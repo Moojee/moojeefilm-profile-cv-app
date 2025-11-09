@@ -1,4 +1,6 @@
 import React from "react";
+import { Element } from "react-scroll";
+
 import {
   Box,
   Grid,
@@ -10,126 +12,165 @@ import {
   Avatar,
 } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import EmailIcon from "@mui/icons-material/Email";
-import ForumIcon from '@mui/icons-material/Forum';
+import ForumIcon from "@mui/icons-material/Forum";
 
 function About() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
-    <Box id="about"
-      sx={{
-        backgroundColor: "#222831",
-        py: { xs: 4, sm: 6, md: 6 },
-        px: { xs: 3, sm: 6, md: 16 },
-      }}
-    >
-      <Grid
-        container
-        spacing={2}
-        alignItems="flex-start"
-        justifyContent="space-between"
+    <Element Element name="about">
+      <Box
+        sx={{
+          backgroundColor: "#222831",
+          py: { xs: 5, sm: 6, md: 7 },
+          px: { xs: 2, sm: 4, md: 10, lg: 16 }, // ลดนิดบน xs
+        }}
       >
-        {/* Left side - Title */}
-        <Grid item xs={12} md={6}>
-          <Typography
-            sx={{
-              fontSize: { xs: "36px", sm: "45px", md: "50px" },
-              color: "#EEEEEE",
-              fontWeight: "bold",
-              textAlign: { xs: "center", md: "left" },
-            }}
-          >
-            ABOUT ME
-          </Typography>
-        </Grid>
+        <Grid
+          container
+          spacing={{ xs: 3, md: 4 }}
+          alignItems="flex-start"
+          justifyContent="space-between"
+          maxWidth="lg"
+          sx={{ mx: "auto" }}
+        >
+          {/* Left side - Title */}
+          <Grid item xs={12} md={5}>
+            <Typography
+              sx={{
+                fontSize: { xs: "30px", sm: "38px", md: "48px" },
+                color: "#EEEEEE",
+                fontWeight: 700,
+                textAlign: { xs: "center", md: "left" },
+                lineHeight: 1.05,
+              }}
+            >
+              ABOUT ME
+            </Typography>
+          </Grid>
 
-        {/* Right side - Content */}
-        <Grid item xs={12} md={6} pt={{ xs: 2, md: 1 }}>
-          <Box
-            sx={{
-              width: "100%",
-              maxWidth: { xs: "100%", md: "600px" },
-              mx: { xs: "auto", md: 0 },
-            }}
-          >
-            <Typography
-              color="#EEEEEE"
+          {/* Right side - Content */}
+          <Grid item xs={12} md={7}>
+            <Box
               sx={{
-                fontSize: { xs: "12px", md: "18px" },
-                lineHeight: 1.6,
+                width: "100%",
+                mx: { xs: "auto", md: 0 },
                 textAlign: { xs: "center", md: "left" },
-                fontWeight: 300,
               }}
             >
-              Currently a 4th-year student at Southeast Asia University, 
-              majoring in Digital Technology and Innovation under the Faculty of Liberal Arts and Science.
-            </Typography>
-            <Box height={{ xs: "12px", md: "16px" }}></Box>
-            <Typography
-              color="#EEEEEE"
-              sx={{
-                fontSize: { xs: "12px", md: "18px" },
-                lineHeight: 1.6,
-                textAlign: { xs: "center", md: "left" },
-                fontWeight: 200,
-              }}
-            >
-              I'm passionate about web design and development—whether it's UX/UI, or frontend work. 
-              Simply put, I enjoy and feel confident in creative design that lets me bring ideas to life.
-            </Typography>
-            <Box sx={{ pt: 3 }}>
-              <Stack
-                direction="row"
-                spacing={2}
-                justifyContent={{ xs: "center", md: "flex-start" }}
+              <Typography
+                sx={{
+                  color: "#EEEEEE",
+                  fontSize: { xs: "13px", sm: "14px", md: "16px" },
+                  lineHeight: 1.7,
+                  fontWeight: 300,
+                }}
               >
-                <Button
-                  variant="contained"
-                  sx={{
-                    bgcolor: "#00ADB5",
-                    m: 0,
-                    mr: "3",
-                    borderRadius: 10,
-                    fontSize: { xs: "14px", md: "16px" },
-                    py: { xs: 1, md: 1.2 }, // ความสูงกำลังดี
-                    px: { xs: 3, md: 4 },   // ความกว้างซ้าย-ขวากำลังพอดี
-                    minWidth: { xs: "120px", md: "150px" }, // กว้างพอประมาณ
-                  }}
-                >
-                  
-                  DONWLOAD RESUME
-                </Button>
+                Currently a 4th-year student at Southeast Asia University,
+                majoring in Digital Technology and Innovation under the Faculty
+                of Liberal Arts and Science.
+              </Typography>
 
-                <a
-                href="https://line.me/ti/p/KYx1zdM7BW"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ textDecoration: "none" }}
-                > 
-                <Avatar sx={{ bgcolor: "#222831" }}>
-                  <ForumIcon sx={{ color: "#EEEEEE" }} />
-                </Avatar>
-                </a>
-                
-                <a
-                  href="https://github.com/Moojee"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ textDecoration: "none" }}
-                >
-                  <Avatar sx={{ bgcolor: "#222831", cursor: "pointer" }}>
-                    <GitHubIcon sx={{ color: "#EEEEEE" }} />
-                  </Avatar>
-                </a>
+              <Box height={{ xs: 10, sm: 12, md: 16 }} />
 
-              </Stack>
+              <Typography
+                sx={{
+                  color: "#EEEEEE",
+                  fontSize: { xs: "13px", sm: "14px", md: "16px" },
+                  lineHeight: 1.7,
+                  fontWeight: 200,
+                }}
+              >
+                I&apos;m passionate about web design and development—whether
+                it&apos;s UX/UI, or frontend work. Simply put, I enjoy and feel
+                confident in creative design that lets me bring ideas to life.
+              </Typography>
+
+              {/* Buttons / Icons */}
+              <Box sx={{ pt: { xs: 3, sm: 3.5 } }}>
+                <Stack
+                  direction={isMobile ? "column" : "row"}
+                  spacing={2}
+                  justifyContent={{ xs: "center", md: "flex-start" }}
+                  alignItems={{ xs: "center", md: "flex-start" }}
+                >
+                  <Button
+                    variant="contained"
+                    sx={{
+                      bgcolor: "#00ADB5",
+                      borderRadius: 10,
+                      fontSize: { xs: "13px", md: "15px" },
+                      py: { xs: 1, md: 1.1 },
+                      px: { xs: 3.5, md: 4 },
+                      minWidth: { xs: "160px", md: "175px" },
+                      fontWeight: 500,
+                      "&:hover": {
+                        bgcolor: "#0099a2",
+                      },
+                    }}
+                  >
+                    DOWNLOAD RESUME
+                  </Button>
+
+                  {/* ✅ แยก Stack แนวนอนออกมาเฉพาะ Avatar */}
+                  <Stack direction="row" spacing={2}>
+                    {/* LINE */}
+                    <a
+                      href="https://line.me/ti/p/KYx1zdM7BW"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ textDecoration: "none" }}
+                    >
+                      <Avatar
+                        sx={{
+                          bgcolor: "#222831",
+                          border: "1px solid #EEEEEE",
+                          width: { xs: 40, sm: 42, md: 46 },
+                          height: { xs: 40, sm: 42, md: 46 },
+                          transition: "all 0.25s",
+                          "&:hover": {
+                            borderColor: "#00ADB5",
+                            transform: "scale(1.05)",
+                          },
+                        }}
+                      >
+                        <ForumIcon sx={{ color: "#EEEEEE" }} />
+                      </Avatar>
+                    </a>
+
+                    {/* GitHub */}
+                    <a
+                      href="https://github.com/Moojee"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ textDecoration: "none" }}
+                    >
+                      <Avatar
+                        sx={{
+                          bgcolor: "#222831",
+                          border: "1px solid #EEEEEE",
+                          cursor: "pointer",
+                          width: { xs: 40, sm: 42, md: 46 },
+                          height: { xs: 40, sm: 42, md: 46 },
+                          transition: "all 0.25s",
+                          "&:hover": {
+                            borderColor: "#00ADB5",
+                            transform: "scale(1.05)",
+                          },
+                        }}
+                      >
+                        <GitHubIcon sx={{ color: "#EEEEEE" }} />
+                      </Avatar>
+                    </a>
+                  </Stack>
+                </Stack>
+              </Box>
             </Box>
-          </Box>
+          </Grid>
         </Grid>
-      </Grid>
-    </Box>
+      </Box>
+    </Element>
   );
 }
 

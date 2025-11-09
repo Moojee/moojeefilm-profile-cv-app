@@ -19,51 +19,55 @@ function Connect() {
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
-    <Box id="contact" sx={{ backgroundColor: "#222831" }}>
+    <Box
+      id="contact"
+      sx={{
+        backgroundColor: "#222831",
+        py: { xs: 5, sm: 6, md: 7 },
+        px: { xs: 2.5, sm: 4, md: 10, lg: 16 },
+      }}
+    >
       <Grid
         container
-        spacing={2}
+        spacing={{ xs: 4, md: 5 }}
         alignItems="flex-start"
-        px={{ xs: 3, sm: 6, md: 16 }}
-        py={{ xs: 4, sm: 6, md: 6 }}
+        maxWidth="lg"
+        sx={{ mx: "auto" }}
       >
         {/* LEFT SIDE */}
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={5}>
           <Typography
             sx={{
-              fontSize: { xs: "36px", sm: "45px", md: "50px" },
+              fontSize: { xs: "30px", sm: "38px", md: "48px" },
               color: "#EEEEEE",
-              m: 0,
-              lineHeight: 1,
+              lineHeight: 1.05,
               textAlign: { xs: "center", md: "left" },
-              fontWeight: "bold",
+              fontWeight: 700,
             }}
           >
-            LET'S CONNECT
+            LET&apos;S CONNECT
           </Typography>
 
+          {/* email line */}
           <Stack
-          direction="row"
-          spacing={1}
+            direction="row"
+            spacing={1}
+            justifyContent={{ xs: "center", md: "flex-start" }}
+            sx={{ mt: 2 }}
           >
             <Typography
               sx={{
-                fontSize: { xs: "10px", md: "12px" },
+                fontSize: { xs: "11px", md: "12px" },
                 color: "#EEEEEE",
-                textAlign: { xs: "center", md: "left" },
-                mt: 2,
                 fontWeight: 200,
               }}
             >
-              Say Hello To Me at
+              Say hello to me at
             </Typography>
-
             <Typography
               sx={{
-                fontSize: { xs: "10px", md: "12px" },
+                fontSize: { xs: "11px", md: "12px" },
                 color: "#EEEEEE",
-                textAlign: { xs: "center", md: "left" },
-                mt: 2,
                 textDecoration: "underline",
                 fontWeight: 300,
               }}
@@ -72,43 +76,41 @@ function Connect() {
             </Typography>
           </Stack>
 
-
-            <Stack
+          {/* github id line */}
+          <Stack
             direction="row"
             spacing={1}
+            justifyContent={{ xs: "center", md: "flex-start" }}
+            sx={{ mt: 1 }}
+          >
+            <Typography
+              sx={{
+                fontSize: { xs: "11px", md: "12px" },
+                color: "#EEEEEE",
+                fontWeight: 200,
+              }}
             >
-
-          
-          <Typography
-            sx={{
-              fontSize: { xs: "12px", md: "12px" },
-              color: "#EEEEEE",
-              textAlign: { xs: "center", md: "left" },
-              fontWeight: 200,
-            }}
-          >
-            For Github ID
-          </Typography>
-
-          <Typography
-            sx={{
-              fontSize: { xs: "12px", md: "12px" },
-              color: "#EEEEEE",
-              textAlign: { xs: "center", md: "left" },
-              textDecoration: "underline",
-              fontWeight: 300,
-            }}
-          >
-            Moojee
-          </Typography>
-
+              GitHub ID
+            </Typography>
+            <Typography
+              sx={{
+                fontSize: { xs: "11px", md: "12px" },
+                color: "#EEEEEE",
+                textDecoration: "underline",
+                fontWeight: 300,
+              }}
+            >
+              Moojee
+            </Typography>
           </Stack>
 
-          <Box sx={{ pt: 3, mt: 2 }}>
+          {/* social icons */}
+          <Box sx={{ pt: 3 }}>
             <Stack
               direction="row"
               spacing={2}
               justifyContent={{ xs: "center", md: "flex-start" }}
+              alignItems="center"
             >
               <a
                 href="https://line.me/ti/p/KYx1zdM7BW"
@@ -116,7 +118,17 @@ function Connect() {
                 rel="noopener noreferrer"
                 style={{ textDecoration: "none" }}
               >
-                <Avatar sx={{ bgcolor: "#222831" }}>
+                <Avatar
+                    sx={{
+                      bgcolor: "#222831",
+                      border: "1px solid #EEEEEE",
+                      transition: "all 0.25s",
+                      "&:hover": {
+                        borderColor: "#00ADB5",
+                        transform: "scale(1.05)",
+                      },
+                    }}
+                >
                   <ForumIcon sx={{ color: "#EEEEEE" }} />
                 </Avatar>
               </a>
@@ -127,42 +139,68 @@ function Connect() {
                 rel="noopener noreferrer"
                 style={{ textDecoration: "none" }}
               >
-                <Avatar sx={{ bgcolor: "#222831", cursor: "pointer" }}>
+                <Avatar
+                  sx={{
+                    bgcolor: "#222831",
+                    border: "1px solid #EEEEEE",
+                    cursor: "pointer",
+                    transition: "all 0.25s",
+                    "&:hover": {
+                      borderColor: "#00ADB5",
+                      transform: "scale(1.05)",
+                    },
+                  }}
+                >
                   <GitHubIcon sx={{ color: "#EEEEEE" }} />
                 </Avatar>
               </a>
 
-              <a
+              {/* <a
                 href="https://www.instagram.com/moojeefilm?igsh=MXJ1eWljb3R6eWNneQ%3D%3D&utm_source=qr"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ textDecoration: "none" }}
               >
-                <Avatar sx={{ bgcolor: "#222831" }}>
+                <Avatar
+                  sx={{
+                    bgcolor: "#222831",
+                    border: "1px solid #EEEEEE",
+                    transition: "all 0.25s",
+                    "&:hover": {
+                      borderColor: "#00ADB5",
+                      transform: "scale(1.05)",
+                    },
+                  }}
+                >
                   <InstagramIcon sx={{ color: "#EEEEEE" }} />
                 </Avatar>
-              </a>
+              </a> */}
             </Stack>
           </Box>
 
-          <Box sx={{ position: "relative" }}>
-            <Typography
-              sx={{
-                fontSize: { xs: "6px", md: "8px" },
-                color: "#EEEEEE",
-                textAlign: { xs: "center", md: "left" },
-                mt: 36,
-              }}
-            >
-              © 2025 SUTITA PATTHAMACHAINUWAT
-            </Typography>
-          </Box>
+          {/* footer */}
+          <Typography
+            sx={{
+              fontSize: { xs: "8px", md: "9px" },
+              color: "#EEEEEE",
+              textAlign: { xs: "center", md: "left" },
+              mt: { xs: 4, md: 6 },
+              opacity: 0.6,
+            }}
+          >
+            © 2025 SUTITA PATTHAMACHAINUWAT
+          </Typography>
         </Grid>
 
-        <Grid item xs={12} md={6} ml={24}>
-          {" "}
-          {/* เพิ่ม ml="auto" ให้ชิดขอบขวา */}
-          <Box sx={{ width: "100%", maxWidth: "420px" }}>
+        {/* RIGHT SIDE - FORM */}
+        <Grid item xs={12} md={7}>
+          <Box
+            sx={{
+              width: "100%",
+              maxWidth: 480,
+              ml: { xs: 0, md: "auto" },   // ชิดขวาเฉพาะจอใหญ่
+            }}
+          >
             {/* Name Field */}
             <Box mb={2}>
               <Typography color="#EEEEEE" sx={{ mb: 1, textAlign: "left" }}>
@@ -172,7 +210,6 @@ function Connect() {
                 fullWidth
                 size="small"
                 sx={{
-                  width: "480px", // เพิ่มขนาดของ TextField ให้กว้างขึ้น
                   bgcolor: "#393E46",
                   "& .MuiOutlinedInput-root": {
                     "& fieldset": { borderColor: "transparent" },
@@ -195,7 +232,6 @@ function Connect() {
                 fullWidth
                 size="small"
                 sx={{
-                  width: "480px",
                   bgcolor: "#393E46",
                   "& .MuiOutlinedInput-root": {
                     "& fieldset": { borderColor: "transparent" },
@@ -218,7 +254,6 @@ function Connect() {
                 fullWidth
                 size="small"
                 sx={{
-                  width: "480px",
                   bgcolor: "#393E46",
                   "& .MuiOutlinedInput-root": {
                     "& fieldset": { borderColor: "transparent" },
@@ -242,7 +277,6 @@ function Connect() {
                 multiline
                 rows={4}
                 sx={{
-                  width: "480px",
                   bgcolor: "#393E46",
                   "& .MuiOutlinedInput-root": {
                     "& fieldset": { borderColor: "transparent" },
